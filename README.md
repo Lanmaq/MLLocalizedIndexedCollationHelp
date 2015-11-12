@@ -53,5 +53,6 @@ dispatch_queue_t queue = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 
 ## License
 
 See the LICENSE file for more info
+
 Copyright (c) 2015 Lanmaq
 
