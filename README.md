@@ -2,7 +2,8 @@
 
 ## Introduction
 
-My project to use the address book, and when I wrote eight bad chaos, redundant code. So I do a little finishing, I hope this can be useful to others. If the process of any problems, please add sincerely hope you can tell me and communicate with me, now I do not have this open source code, if you want to use the source code, please contact me well, I will be very happy to learn it is with you together.
+My project to use the address book, and when I wrote eight bad chaos, redundant code. So I do a little finishing, I hope this can be useful to others. If the process of any problems, please add sincerely hope you can tell me and communicate with me, now I do not have this open source code, if you want to use the source code, please contact me well, I will be very happy to learn it is with you together.（bad english,you know）
+
 
 ## Features
 
@@ -44,7 +45,7 @@ dispatch_queue_t queue = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 
     //do something you want
     dispatch_async(dispatch_get_main_queue(), ^{
     //update UI
-});
+    });
 }];
 
 ```
@@ -52,6 +53,5 @@ dispatch_queue_t queue = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 
 ## License
 
 See the LICENSE file for more info
-
 Copyright (c) 2015 Lanmaq
 
