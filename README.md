@@ -24,10 +24,10 @@ See the code snippet below for an example of how to implement, or example projec
 
 ```objective-c
 [[MLLocalizedIndexedCollationHelper shareInstance] sortObjects:_testDataArray selector:@selector(description) result:^(NSDictionary *dictionary,NSError *error) {
-if (!dictionary){
-NSLog(@"%@",error);
-}
-//doing something here
+    if (!dictionary){
+    NSLog(@"%@",error);
+    }
+    //doing something here
 }];
 
 ```
@@ -36,18 +36,22 @@ comstom queue
 
 ```objective-c
 dispatch_queue_t queue = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, NULL);
+
 [[MLLocalizedIndexedCollationHelper shareInstance] sortObjects:_testDataArray selector:@selector(description) onQueue:queue result:^(NSDictionary * _Nonnull dictionary, NSError * _Nonnull error) {
-if (!dictionary){
-NSLog(@"%@",error);
-}
-//do something you want
-dispatch_async(dispatch_get_main_queue(), ^{
-//update UI
+    if (!dictionary){
+    NSLog(@"%@",error);
+    }
+    //do something you want
+    dispatch_async(dispatch_get_main_queue(), ^{
+    //update UI
 });
 }];
 
 ```
 
 ## License
-The MIT License (MIT)
-Copyright (c) 2015 Lanmaq@lanmaq.com
+
+See the LICENSE file for more info
+
+Copyright (c) 2015 Lanmaq
+
