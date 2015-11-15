@@ -96,11 +96,12 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return [_tableViewSectionIndexTitleArray objectAtIndex:section + 1];
+    //[[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section];
 }
 - (nullable NSArray<NSString *> *) sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     return _tableViewSectionIndexTitleArray;
-    //You can also return as  [[UILocalizedIndexedCollation currentCollation] sectionTitles] ,it will display all the section Index titles (e.g. A-Z,# in US/English)
+    //You can also return as  [[UILocalizedIndexedCollation currentCollation] sectionIndexTitles] ,it will display all the section Index titles (e.g. A-Z,# in US/English)
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index // tell table which section corresponds to section title/index (e.g. "B",1))
 {
@@ -108,6 +109,7 @@
         [self.tableView scrollRectToVisible:self.searchDisplayController.searchBar.frame animated:NO];
     }
     return index - 1;
+    //[[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
 }
 
 /*
