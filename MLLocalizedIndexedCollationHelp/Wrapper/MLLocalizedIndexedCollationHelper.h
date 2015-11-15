@@ -20,7 +20,9 @@ NS_CLASS_AVAILABLE_IOS(3_0)@interface MLLocalizedIndexedCollationHelper : NSObje
 
 /**
  * @param targetArray   target Array. must have count if not will have a error
- * @param selector       * !!!selector must not take any arguments and return an NSString.* must not be null if not will have a error
+     (A model object of the application that is part of the data model for the table view.)
+ * @param selector       * !!!selector must not take any arguments and return an NSString.* must not be null if not will have a error 
+     (A selector that identifies a method returning an identifying string for object that is used in collation. The method should take no arguments and return an NSString object. For example, this could be a name property on the object.)
  * @param resultBlock   return result thought block.
  * @return  dictionary     3key/value pairs keys:"SortedArray"、"SortResultArraySectionIndexTitle"、"SortResultArray". value see runtime.
  * @return  error             If an error occurs, upon return contains an `NSError` object that describes the problem.
