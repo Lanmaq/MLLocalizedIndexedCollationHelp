@@ -30,6 +30,7 @@
     //self.tableView.sectionIndexMinimumDisplayRowCount = 5;
     //Only test  I don't achieve these functions
     self.searchDisplayController.searchBar.userInteractionEnabled = NO;
+    self.tableView.sectionIndexColor = [UIColor blackColor];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
