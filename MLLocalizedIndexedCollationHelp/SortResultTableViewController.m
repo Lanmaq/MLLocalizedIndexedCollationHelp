@@ -17,12 +17,8 @@
 
 @implementation SortResultTableViewController
 
--(void)dealloc
-{
-    _testDataArray = nil;
-    _tableViewDataSouceArray = nil;
-    _tableViewSectionIndexTitleArray = nil;
-}
+#pragma mark - Life cycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,18 +41,22 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    //UISearchController
+    //UISearchDisplayController
      __weak typeof(self) weakSelf = self;
 #if  0
     [[MLLocalizedIndexedCollationHelper shareInstance] sortObjects:_testDataArray selector:@selector(description) result:^(NSDictionary *dictionary,NSError *error) {
         if (!dictionary){
             NSLog(@"%@",error);
         }
-        weakSelf.tableViewDataSouceArray = [dictionary objectForKey:@"SortResultArray"];//key/value ? see MLLocalizedIndexedCollationHelper.h
+        __strong typedef(weakSelf) strongSelf = weakSelf;
+       
+        strongSelf.tableViewDataSouceArray = [dictionary objectForKey:@"SortResultArray"];//key/value ? see MLLocalizedIndexedCollationHelper.h
         NSMutableArray *indexTitleArray = [NSMutableArray arrayWithArray:(NSArray *)[dictionary objectForKey:@"SortResultArraySectionIndexTitle"]];
         [indexTitleArray insertObject:UITableViewIndexSearch atIndex:0];
-        weakSelf.tableViewSectionIndexTitleArray = indexTitleArray;
+        strongSelf.tableViewSectionIndexTitleArray = indexTitleArray;
       
-        [weakSelf.tableView reloadData];
+        [strongSelf.tableView reloadData];
     }];
 #else
     dispatch_queue_t queue = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, NULL);
@@ -64,13 +64,15 @@
         if (!dictionary){
             NSLog(@"%@",error);
         }
-        weakSelf.tableViewDataSouceArray = [dictionary objectForKey:@"SortResultArray"];//key/value ? see MLLocalizedIndexedCollationHelper.h
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+     
+        strongSelf.tableViewDataSouceArray = [dictionary objectForKey:@"SortResultArray"];//key/value ? see MLLocalizedIndexedCollationHelper.h
         NSMutableArray *indexTitleArray = [NSMutableArray arrayWithArray:(NSArray *)[dictionary objectForKey:@"SortResultArraySectionIndexTitle"]];
         [indexTitleArray insertObject:UITableViewIndexSearch atIndex:0];
-        weakSelf.tableViewSectionIndexTitleArray = indexTitleArray;
+        strongSelf.tableViewSectionIndexTitleArray = indexTitleArray;
        
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.tableView reloadData];
+            [strongSelf.tableView reloadData];
         });
     }];
 #endif

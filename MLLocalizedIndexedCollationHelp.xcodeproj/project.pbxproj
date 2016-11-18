@@ -15,9 +15,9 @@
 		B4DE2C1B1BF3093200BD084C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DE2C191BF3093200BD084C /* LaunchScreen.storyboard */; };
 		B4DE2C261BF3093200BD084C /* MLLocalizedIndexedCollationHelpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DE2C251BF3093200BD084C /* MLLocalizedIndexedCollationHelpTests.m */; };
 		B4DE2C311BF3093200BD084C /* MLLocalizedIndexedCollationHelpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DE2C301BF3093200BD084C /* MLLocalizedIndexedCollationHelpUITests.m */; };
-		B4DE2C411BF3093F00BD084C /* libMLLocalizedIndexedCollationHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DE2C3F1BF3093F00BD084C /* libMLLocalizedIndexedCollationHelper.a */; settings = {ASSET_TAGS = (); }; };
-		B4DE2C441BF30A8A00BD084C /* SortResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DE2C431BF30A8A00BD084C /* SortResultTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		B4DE2C4A1BF32F5700BD084C /* TestDateArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4DE2C491BF32F5700BD084C /* TestDateArray.plist */; settings = {ASSET_TAGS = (); }; };
+		B4DE2C411BF3093F00BD084C /* libMLLocalizedIndexedCollationHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DE2C3F1BF3093F00BD084C /* libMLLocalizedIndexedCollationHelper.a */; };
+		B4DE2C441BF30A8A00BD084C /* SortResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DE2C431BF30A8A00BD084C /* SortResultTableViewController.m */; };
+		B4DE2C4A1BF32F5700BD084C /* TestDateArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4DE2C491BF32F5700BD084C /* TestDateArray.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -530,6 +530,7 @@
 				B4DE2C371BF3093200BD084C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4DE2C381BF3093200BD084C /* Build configuration list for PBXNativeTarget "MLLocalizedIndexedCollationHelpTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +539,7 @@
 				B4DE2C3A1BF3093200BD084C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4DE2C3B1BF3093200BD084C /* Build configuration list for PBXNativeTarget "MLLocalizedIndexedCollationHelpUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +548,7 @@
 				B4DE2C3D1BF3093200BD084C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
